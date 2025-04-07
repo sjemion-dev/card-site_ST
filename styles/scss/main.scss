@@ -1,0 +1,139 @@
+@use 'global' as *;
+
+// -- HERO
+
+.hero_section {
+	height: $section;
+	@include grid(vw(400), vw(600), vw(200), vh(100), vh(578));
+	margin-bottom: $scn-margin;
+}
+
+.lang-box {
+	@include flexbox;
+	grid-area: 1 / 3 / 2 / 4;
+	height: 100%;
+	gap: vw(20);
+}
+
+.button-lang {
+	@include flexbox;
+	transition: transform $time;
+
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.2);
+	}
+
+	&:active {
+		opacity: $opacity;
+	}
+}
+
+.flag-image {
+	width: 100%;
+}
+
+.hero-image {
+	grid-area: 1 / 1 / 3 / 2;
+	width: 100%;
+	@include border($dark-gray);
+}
+
+.hero-content {
+	@include flexbox(column, $ai: center);
+	grid-area: 1 / 2 / 3 / 4;
+	width: 100%;
+	gap: vh(5);
+}
+
+.greeting-name {
+	font-size: vw(85);
+	text-decoration: underline vh(0.5);
+	text-underline-offset: vh(4);
+}
+
+.aboutMe-link {
+	font-size: vw(23);
+	@include border;
+	padding: vw(5);
+	transition: transform $time;
+
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.1);
+	}
+
+	&:active {
+		opacity: $opacity;
+	}
+}
+
+// -- ABOUT ME
+
+.aboutMe_section {
+	height: $section;
+	@include grid(vw(475), vw(710), 0, vh(678), 0);
+	margin-bottom: $scn-margin;
+}
+
+.aboutMe-info {
+	grid-area: 1 / 1 / 2 / 2;
+	margin: 0 vw(20);
+	font-size: vw(23);
+	font-family: 'Inter';
+}
+
+.aboutMe-image {
+	width: 100%;
+	grid-area: 1 / 2 / 2 / 2;
+	@include border($dark-gray);
+}
+
+// -- MY SKILLS
+
+.mySkills_section {
+	height: $section;
+	@include grid(vw(565), vw(635), 0, vh(100), vh(578));
+}
+
+.mySkills-title {
+	grid-area: 1 / 1 / 2 / 3;
+	font-size: vw(45);
+	color: $light-gray;
+}
+
+.mySkills-image {
+	grid-area: 2 / 1 / 3 / 2;
+	width: 90%;
+	@include border($dark-gray);
+}
+
+.arrow-button {
+	width: vw(45);
+	height: vh(45);
+}
+
+.arrow-svg {
+	fill: $light-gray;
+
+	&:hover {
+		cursor: pointer;
+		fill: $dark-gray;
+	}
+
+	&:active {
+		fill: black;
+	}
+}
+
+.skillsIcon-box {
+	width: 100%;
+	@include flexbox(row, space-around, center);
+	grid-area: 2 / 2 / 3 / 3;
+	gap: vw(5);
+}
+
+.skill-icon {
+	width: vw(400);
+	height: vh(400);
+}

@@ -1,0 +1,17 @@
+@mixin grid($cln1, $cln2, $cln3, $row1, $row2, $pi: center center) {
+	display: grid;
+	grid-template-columns: $cln1 $cln2 $cln3;
+	grid-template-rows: $row1 $row2;
+	justify-items: $ji;
+	align-items: $aI;
+}
+
+@mixin flexbox($drn: row, $jc: stretch, $ai: stretch) {
+	display: flex;
+	flex-direction: $drn;
+	place-items: $pi;
+}
+
+@mixin border($color: white, $width: 1px, $type: solid) {
+	border: $color, $width, $type;
+}
